@@ -7,7 +7,7 @@ plugins {
     id("com.gradle.plugin-publish") version "1.2.1"
 }
 
-group = "store.kmpd"
+group = "com.sosafeapp"
 version = layout.projectDirectory.file("VERSION").asFile.readText().trim()
 description = "Apple binaries deployment plugin for KMP"
 
@@ -37,13 +37,13 @@ java {
 }
 
 gradlePlugin {
-    website.set("https://github.com/abdulowork/KMPAppleBinariesDeployment")
-    vcsUrl.set("https://github.com/abdulowork/KMPAppleBinariesDeployment")
+    website.set("https://github.com/sosafeapp/KMPAppleBinariesDeployment")
+    vcsUrl.set("https://github.com/sosafeapp/KMPAppleBinariesDeployment")
 
     plugins {
         create("kmp_apple_binaries_deployment") {
-            id = "store.kmpd.plugin"
-            implementationClass = "store.kmpd.KMPAppleBinariesDeploymentPlugin"
+            id = "com.sosafeapp.kmpd.plugin"
+            implementationClass = "com.sosafeapp.kmpd.KMPAppleBinariesDeploymentPlugin"
             displayName = "Apple binaries deployment plugin for KMP"
             description = "Plugin for deploying SPM packages and CocoaPods specs from Kotlin Multiplatform projects"
             tags.set(listOf("KMP", "Kotlin Multiplatform", "XCFramework", "publication", "deployment", "SPM", "Swift Package Manager", "CocoaPods"))
@@ -94,7 +94,7 @@ publishing {
         pom {
             name = "Apple binaries deployment plugin for KMP"
             description = "Apple binaries deployment plugin for KMP"
-            url = "https://github.com/abdulowork/KMPAppleBinariesDeployment"
+            url = "https://github.com/sosafeapp/KMPAppleBinariesDeployment"
             licenses {
                 license {
                     name = "MIT License"
@@ -103,15 +103,15 @@ publishing {
             }
             developers {
                 developer {
-                    id = "Tim"
-                    name = "Tim"
-                    email = "abdulowork@gmail.com"
+                    id = "sosafe-android-team"
+                    name = "SOSAFE android team"
+                    email = "android@sosafe.app"
                 }
             }
             scm {
-                connection = "scm:git:git@github.com:abdulowork/KMPAppleBinariesDeployment.git"
-                developerConnection = "scm:git:git@github.com:abdulowork/KMPAppleBinariesDeployment.git"
-                url = "https://github.com/abdulowork/KMPAppleBinariesDeployment"
+                connection = "scm:git:git@github.com:sosafeapp/KMPAppleBinariesDeployment.git"
+                developerConnection = "scm:git:git@github.com:sosafeapp/KMPAppleBinariesDeployment.git"
+                url = "https://github.com/sosafeapp/KMPAppleBinariesDeployment"
             }
         }
 

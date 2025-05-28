@@ -1,4 +1,4 @@
-import store.kmpd.utils.swiftPackageChecksum
+import com.sosafeapp.kmpd.utils.swiftPackageChecksum
 import java.io.File
 import kotlin.test.Test
 import kotlin.test.assertEquals

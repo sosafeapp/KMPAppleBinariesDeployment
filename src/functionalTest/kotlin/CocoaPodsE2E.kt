@@ -34,8 +34,8 @@ class CocoaPodsE2E {
             otherPlugins = "kotlin(\"native.cocoapods\") version \"${kotlinVersion}\"",
             buildScript = """
                 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-                import store.kmpd.*
-                import store.kmpd.cocoapods.*
+                import com.sosafeapp.kmpd.*
+                import com.sosafeapp.kmpd.cocoapods.*
                 
                 kotlin {
                     iosSimulatorArm64()
@@ -123,8 +123,8 @@ class CocoaPodsE2E {
             otherPlugins = "kotlin(\"native.cocoapods\") version \"${kotlinVersion}\"",
             buildScript = """
                 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-                import store.kmpd.*
-                import store.kmpd.cocoapods.*
+                import com.sosafeapp.kmpd.*
+                import com.sosafeapp.kmpd.cocoapods.*
                 
                 kotlin {
                     iosSimulatorArm64()

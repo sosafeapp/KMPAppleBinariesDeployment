@@ -36,8 +36,8 @@ class SpmE2E {
             kotlinVersion = kotlinVersion,
             buildScript = """
                 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-                import store.kmpd.*
-                import store.kmpd.spm.*
+                import com.sosafeapp.kmpd.*
+                import com.sosafeapp.kmpd.spm.*
                 
                 kotlin {
                     val xcf = XCFramework("Kotlin")
@@ -123,8 +123,8 @@ class SpmE2E {
             kotlinVersion = kotlinVersion,
             buildScript = """
                 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-                import store.kmpd.*
-                import store.kmpd.spm.*
+                import com.sosafeapp.kmpd.*
+                import com.sosafeapp.kmpd.spm.*
                 
                 kotlin {
                     val xcf = XCFramework("Kotlin")

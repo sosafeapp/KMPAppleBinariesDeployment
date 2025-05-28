@@ -19,7 +19,7 @@ Apply the plugin in your build script:
 
 plugins { 
     kotlin("multiplatform")
-    id("store.kmpd.plugin") version "0.0.4"
+    id("com.sosafeapp.kmpd.plugin") version "0.0.4"
 }
 ```
 
@@ -44,7 +44,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins { 
     kotlin("multiplatform")
-    id("store.kmpd.plugin")
+    id("com.sosafeapp.kmpd.plugin")
 }
 
 kotlin { 
@@ -167,7 +167,7 @@ Before specifying a deployment option, apply the `kotlin("native.cocoapods")` pl
 plugins { 
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("store.kmpd.plugin")
+    id("com.sosafeapp.kmpd.plugin")
 }
 
 kotlin { 

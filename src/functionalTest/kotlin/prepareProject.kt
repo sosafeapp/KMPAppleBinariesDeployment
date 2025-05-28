@@ -31,7 +31,7 @@ fun prepareProject(
     File(projectDir, "build.gradle.kts").writeText(
         """
             plugins {
-                id("store.kmpd.plugin") version "+"
+                id("com.sosafeapp.kmpd.plugin") version "+"
                 kotlin("multiplatform") version "$kotlinVersion"
                 $otherPlugins
             }
