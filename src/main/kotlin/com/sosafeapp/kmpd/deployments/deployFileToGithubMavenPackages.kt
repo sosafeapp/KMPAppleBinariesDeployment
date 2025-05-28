@@ -7,6 +7,8 @@ import io.ktor.http.*
 import io.ktor.util.*
 import kotlinx.coroutines.runBlocking
 import com.sosafeapp.kmpd.utils.StreamContent
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.HttpTimeout
 import java.io.File
 
 @OptIn(InternalAPI::class)
@@ -19,7 +21,12 @@ fun deployFileToGithubMavenPackages(
     packagePath: List<String>,
 ): String {
     runBlocking {
-        val client = HttpClient()
+        val client = HttpClient(CIO) {
+            install(HttpTimeout) {
+                // TODO: get value from configuration
+                requestTimeoutMillis = 300_000 // 5 minutes
+            }
+        }
         val response = client.put("https://maven.pkg.github.com") {
             url {
                 path(username, repository, *packagePath.toTypedArray(), deployedFileName)
