@@ -49,7 +49,7 @@ gradlePlugin {
     vcsUrl.set("https://github.com/sosafeapp/KMPAppleBinariesDeployment")
 
     plugins {
-        create("kmp_apple_binaries_deployment") {
+        create("kmp_apple_binaries_deployment_fork") {
             id = "com.sosafeapp.kmpd.plugin"
             implementationClass = "com.sosafeapp.kmpd.KMPAppleBinariesDeploymentPlugin"
             displayName = "Apple binaries deployment plugin for KMP"
