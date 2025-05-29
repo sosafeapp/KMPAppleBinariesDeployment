@@ -19,12 +19,12 @@ fun deployFileToGithubMavenPackages(
     fileToDeploy: File,
     deployedFileName: String,
     packagePath: List<String>,
+    requestTimeoutInMillis: Long,
 ): String {
     runBlocking {
         val client = HttpClient(CIO) {
             install(HttpTimeout) {
-                // TODO: get value from configuration
-                requestTimeoutMillis = 300_000 // 5 minutes
+                requestTimeoutMillis = requestTimeoutInMillis
             }
         }
         val response = client.put("https://maven.pkg.github.com") {

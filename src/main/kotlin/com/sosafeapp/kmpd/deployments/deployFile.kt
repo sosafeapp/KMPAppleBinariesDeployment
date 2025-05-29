@@ -21,6 +21,7 @@ fun deployFile(
                 fileToDeploy = file,
                 deployedFileName = deployedFileName,
                 packagePath = deployment.packagePath,
+                requestTimeoutInMillis = deployment.requestTimeOutInMillis,
             )
         }
 

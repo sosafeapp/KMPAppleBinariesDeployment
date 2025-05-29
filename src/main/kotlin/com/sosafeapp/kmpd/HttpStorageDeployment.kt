@@ -6,6 +6,7 @@ sealed class HttpStorageDeployment {
         val username: String,
         val repository: String,
         val packagePath: List<String> = listOf("publication", "files", "all"),
+        val requestTimeOutInMillis: Long = 600_000, // 10 minutes
     ) : HttpStorageDeployment()
 
     class GithubReleases(
