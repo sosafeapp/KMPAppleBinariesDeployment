@@ -1,5 +1,8 @@
 # Kotlin Multiplatform XCFrameworks deployment plugin
 
+> [!IMPORTANT]  
+> This is a fork of `abdulowork/KMPAppleBinariesDeployment`, it was created to fix an issue on uploading the artifact through the Ktor client.
+
 KMP Apple binaries deployment Gradle plugin helps you publish your Kotlin Multiplatform project as an XCFramework end-to-end for Swift Package Manager and CocoaPods integrations.
 
 Currently supported are:
@@ -19,7 +22,7 @@ Apply the plugin in your build script:
 
 plugins { 
     kotlin("multiplatform")
-    id("com.sosafeapp.kmpd.plugin") version "0.0.4"
+    id("com.sosafeapp.kmpd.plugin") version "0.0.6"
 }
 ```
 
@@ -44,7 +47,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins { 
     kotlin("multiplatform")
-    id("com.sosafeapp.kmpd.plugin")
+    id("store.kmpd.plugin")
 }
 
 kotlin { 
@@ -167,7 +170,7 @@ Before specifying a deployment option, apply the `kotlin("native.cocoapods")` pl
 plugins { 
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.sosafeapp.kmpd.plugin")
+    id("store.kmpd.plugin")
 }
 
 kotlin { 
