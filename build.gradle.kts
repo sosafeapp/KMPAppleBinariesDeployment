@@ -34,14 +34,6 @@ dependencies {
 java {
     withJavadocJar()
     withSourcesJar()
-
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(20))
-    }
-}
-
-kotlin {
-    jvmToolchain(20)
 }
 
 gradlePlugin {
